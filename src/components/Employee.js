@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 
 class Employee extends React.Component{
   
@@ -13,9 +14,8 @@ class Employee extends React.Component{
   }
  
   componentDidMount() {
-    const id = this.props.match.params.id;
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    fetch(proxyurl + "https://us-central1-ng-gae-app.cloudfunctions.net/employee?empId=" + id)
+    const id = this.props.match.params.id; 
+    fetch("https://us-central1-ng-gae-app.cloudfunctions.net/employee?empId=" + id)
       .then((res) => res.json())
       .then(
         (result) => {          
@@ -76,7 +76,10 @@ render(){
             </td>
           </tr>
         </tbody>
-      </table>
+      </table>      
+      <div className="p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer flex justify-center">
+        <Link className="p-3 bg-teal-500 border-teal-light border hover:bg-teal-600 text-white" to="/">Back</Link>
+      </div>     
     </div>
   );
 } 

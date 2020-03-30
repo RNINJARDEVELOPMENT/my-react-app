@@ -11,9 +11,8 @@ class Employees extends React.Component {
     };
   }
 
-  componentDidMount() {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    fetch(proxyurl + "https://us-central1-ng-gae-app.cloudfunctions.net/employees")
+  componentDidMount() { 
+    fetch("https://us-central1-ng-gae-app.cloudfunctions.net/employees")
       .then((res) => res.json())
       .then(
         (result) => {          

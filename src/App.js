@@ -13,8 +13,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Nav />
-      <div>
+      <Nav /> 
         <Switch>
           <Route exact path="/">
             <Employees />
@@ -26,8 +25,7 @@ function App() {
           <Route path="*">
             <PageNotFound />
           </Route>
-        </Switch>
-      </div>
+        </Switch> 
     </BrowserRouter>
   );
 }
