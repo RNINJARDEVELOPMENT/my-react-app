@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# APP URL
+
+App is hosted on Firebase and running at this URL https://ng-gae-app.firebaseapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
